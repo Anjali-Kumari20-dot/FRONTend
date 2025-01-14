@@ -18,3 +18,22 @@ h1{
     background-color: green;
     color: white;
 }
+/* descendant Selector */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+nav ul li a{
+    color: hotpink;
+}
+p + h3{
+    text-decoration: underline;
+}
+.upvote + button{
+    background-color: rgb(149, 149, 226);
+}
+/* Child Combinator */
+div > input{
+    background-color:darkcyan ;
+    color: white;
+}
