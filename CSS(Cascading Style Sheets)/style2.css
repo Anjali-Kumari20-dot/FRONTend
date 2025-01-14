@@ -23,7 +23,7 @@ h1{
     color: purple;
     background-color: yellow;
 }
-nav ul li a{
+nav a{
     color: hotpink;
 }
 p + h3{
@@ -36,4 +36,13 @@ p + h3{
 div > input{
     background-color:darkcyan ;
     color: white;
+}
+input[type="text"]{
+    color: red;
+}
+input[type="password"]{
+    color: green;
+}
+input[type]{
+    background-color: ghostwhite;
 }
