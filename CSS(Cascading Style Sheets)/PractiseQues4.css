@@ -20,13 +20,13 @@ p{
     color: white;
 }
 
-div.greetdiv.greet{
-    color: green;
+div.greetdiv.greet{   /* 0 2 1 -> (21)*/
+    color: green ;
 }
-.greetdiv p.greet{
+.greetdiv p.greet{  /* 0 2 1 -> (21)*/
     color: blue;
     background-color: aliceblue;
 }
-.greetdiv .greet{
+.greetdiv .greet{ /* 0 2 0 -> (20)*/
     color: red;
 }
