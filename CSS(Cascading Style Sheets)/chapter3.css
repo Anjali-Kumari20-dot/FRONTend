@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(247, 156, 200);
+}
+#div1{
+    height: 200px;
+    width: 500px;
+    background-color: rgb(247, 92, 92);
+    border: 5px solid rgb(207, 59, 59);
+    border-right-style: dotted;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+#div2{
+    height: 200px;
+    width: 500px;
+    background-color: pink;
+    border: 5px solid rgb(193, 36, 62);
+    border-left-style: dotted;
+    border-radius: 15px;
+}
+h1{
+    width: 300px;
+    border: 2px ridge rgb(201, 104, 201);
+}
+button{
+    margin-top: 79px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: rgb(240, 130, 220);
+    padding:1px 2px ;
+}
