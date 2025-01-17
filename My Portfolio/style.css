@@ -1,11 +1,22 @@
 body{
     background-color: #C4D6E7;
 }
-.links{
+div{
     text-align: end;
     position: relative;
     top: 0;
     z-index: 10;
     word-spacing: 15px;
     text-decoration: none;
+    display: inline-block;
+}
+#myName{
+    margin-right: 150px;
+}
+
+.about{
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    display: inline-block;
 }
