@@ -1,0 +1,53 @@
+/* It is a one-dimensional layout method for arranging items in rows or columns */
+h1{
+    text-align: center;
+}
+
+#box1{
+    background-color: violet;
+}
+#box2{
+    background-color: indigo;
+}
+#box3{
+    background-color: blue;
+    max-height: 75px;
+}
+#box4{
+    background-color: green;
+}
+#box5{
+    background-color: yellow;
+}
+#box6{
+    background-color: orange;
+    font-size: 3em;
+    min-height: 200px;
+}
+#box7{
+    background-color: red;
+}
+#Container {
+    height: 500px;
+    width: 80%;
+    background-color: rgb(195, 250, 250);
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    /* FLEXBOX DIRECTION */
+    /* flex-direction: column-reverse; */
+    flex-direction: row;
+    /* JUSTIFY CONTENT */
+    justify-content: flex-start;
+    /* FLEX WRAP */
+    flex-wrap: wrap-reverse; /*wraps in cross axis*/
+    /* ALIGN ITEMS */
+    align-items: baseline;
+}
+#Container div {
+    height: 100px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
