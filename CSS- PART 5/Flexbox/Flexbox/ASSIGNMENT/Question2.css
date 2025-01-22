@@ -1,0 +1,17 @@
+#navbar {
+    height: 50px;
+    width: 900px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    background-color: pink;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+.option {
+    height: 50px;
+    width: 80px;
+    line-height: 50px;
+    font-size: 24px;
+    margin-left: 5px;
+}
