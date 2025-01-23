@@ -1,0 +1,66 @@
+.container {
+    height: 700px;
+    width: 950px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 8px;
+}
+.box {
+    background-color: pink;
+}
+.one {
+    grid-column: 1/13;
+}
+.two {
+    grid-row: 2/12 ;
+    grid-column: 1/4;
+}
+.three {
+    grid-row: 2;
+    grid-column: 4/10;
+}
+.four {
+    grid-row: 2/12;
+    grid-column: 10/13;
+}
+.five {
+    grid-row: 3/12;
+    grid-column: 4/10;
+}
+.six {
+    grid-row: 12;
+    grid-column: 1/13;
+}
+@media (max-width: 720px) {
+    .one{
+        grid-column: 1/12;
+        content: "header (1row, 12column)";
+    }
+    .two{
+        grid-row: 3/12;
+        grid-column: 1/4;
+        content: "sidebar (9row, 3column)";
+    }
+    .three{
+        grid-row: 2;
+        grid-column: 1/13;
+        content: "navigation (1row, 12column)";
+    }
+    .four {
+        grid-row: 12;
+        grid-column: 1/4;
+        content: "ads (1row, 3column)";
+    }
+    .five{
+        grid-row: 3/12;
+        grid-column: 4/13;
+        content: "main (1row, 3column)";
+    }
+    .six{
+        grid-row: 12;
+        grid-column: 4/13;
+        content: "footer (1row, 9column)";
+    }
+}
