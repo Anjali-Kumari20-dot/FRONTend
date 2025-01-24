@@ -13,6 +13,12 @@
     position: absolute;
     left: 100px;
     top: 150px;
+    animation: 3s blink infinite linear;
+}
+@keyframes blink {
+    100% {
+        border-top-radius: 20%;
+    }
 }
 .right-eye{
     left: 400px;
