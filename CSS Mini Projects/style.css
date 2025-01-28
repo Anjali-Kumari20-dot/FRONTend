@@ -104,3 +104,41 @@
 #check:checked ~ .sidebar_menu .btn_two i {
     opacity: 1;
 }
+/* .content {
+    position: relative;
+    height: 100vh; */
+
+    /* animation:titleAnimate 5s ease-in 0s 2 linear; */
+/* } */
+.content h1 {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    color: White;
+    font-weight: 300;
+
+    animation: titleAnimate 3s ease-in /*0s 2 linear*/;
+}
+ @keyframes titleAnimate {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100%{
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+} 
+.description ul {
+    color: #af75df;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
