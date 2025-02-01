@@ -15,9 +15,8 @@ body {
     height: 664px;
     border: 2px solid black;
     position: relative;
-    background-image: url('./ASSETS/BackgroundImage.jpg');
-    background-blend-mode: multiply;
-
+    background-image: url('./ASSETS/BackgroundImage.png');
+    background-size: cover;
 }
 .main-content {
     width: 100%;
