@@ -36,6 +36,6 @@ else if(marks >= 60){
 else if(marks >= 33){
     console.log("B");
 }
-else if(marks < 33 ){
+else{
     console.log("F");
 }
