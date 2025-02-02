@@ -1,4 +1,5 @@
-let color = "red";
+// alert("Something is wrong!");
+let color = prompt("Enter the color: ");
 switch(color){
     case "red" :
         console.log("STOP");
