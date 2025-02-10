@@ -16,4 +16,4 @@ let greet = function(){
 
 // multipleGreet(function() {console.log("namaste")}, 1000);
 
-multipleGreet(greet(), 1000);
+multipleGreet(greet, 1000); // greet() -> X
