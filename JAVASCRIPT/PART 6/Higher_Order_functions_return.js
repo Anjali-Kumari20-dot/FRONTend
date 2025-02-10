@@ -16,4 +16,4 @@ function oddOrEvenFactory(request){
     }
 }
 
-let request = "odd";
+let request = "odd"; // depending on our request hm custom functions bna skte h

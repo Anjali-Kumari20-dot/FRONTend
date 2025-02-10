@@ -1,13 +1,15 @@
 // Methods -> Actions that can be performed on an object.
 
 const calculator = {
-    add: function(a, b){
+    add(a, b){
         return a + b;
     },
-    sub: function(a, b){
+    sub(a, b){
         return a - b;
     },
-    mul: function(a, b){
+    mul(a, b){
         return a * b;
     }
-}
+};
+
+console.log("calculator.add(12,234)");
