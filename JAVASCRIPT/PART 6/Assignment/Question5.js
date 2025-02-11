@@ -2,7 +2,7 @@
 
 function random(start, end){
     let diff = end - start;
-    return Math.floor(Math.random() * end) + start;
+    return Math.floor(Math.random() * diff) + start;
 }
 
 console.log(random(100,200));
