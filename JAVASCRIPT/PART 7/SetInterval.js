@@ -14,3 +14,5 @@ console.log(id);
 let id2 = setInterval(() => {
     console.log("Hello world");
 }, 3000);
+
+// clearInterval(id) -> stop the run
