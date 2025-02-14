@@ -10,7 +10,20 @@ let newArr = [...nums];
 console.log(newArr);
 console.log(Math.min(...nums));
 
+// ARRAY literals
 let odd = [1, 3, 5, 7, 9, 11, 13, 15];
 let even = [2, 4, 6, 8, 10, 12, 14];
 let number = [...odd, ...even];
 console.log(number);
+
+// With object Literals
+let data = {
+    email: "AnjaliKumari2345@gmail.com",
+    password: "abcd"
+}
+
+let dataCopy = {
+    ...data, 
+    id: 123
+}
+console.log(dataCopy)
