@@ -14,7 +14,7 @@ const student = {
     subjects: ["Hindi", "English", "Math", "Science", "Social Studies"],
     username: "Anjali123@...",
     password: 1234,
-};
+} ;
 
 const{username: user, password: pass } = student;
 
