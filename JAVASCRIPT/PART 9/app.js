@@ -1,5 +1,5 @@
-let smallImages = document.getElementsByClassName("oldImg");
+let links = document.querySelectorAll('.box a');
 
-for(let i = 0; i < smallImages.length; i++){
-    console.dir(smallImages[i].src);
+for(let i = 0; i < links.length; i++){
+    links[i].style.color = "purple";
 }
