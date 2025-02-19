@@ -1,12 +1,25 @@
-let form = document.querySelector("form");
+// let form = document.querySelector("form");
 
-form.addEventListener("submit", function(event){
-    event.preventDefault();
-});
+// form.addEventListener("submit", function(event){
+//     event.preventDefault();
+// });
 
-let user = document.querySelector("#user");
+// let user = document.querySelector("#user");
 
-user.addEventListener("change", function() {
-    console.log("input changed");
-    console.log("final value = ", this.value);
+// user.addEventListener("change", function() {
+//     console.log("change event");
+//     console.log("final value = ", this.value);
+// });
+
+// user.addEventListener("input", function() {
+//     console.log("input event");
+//     console.log("final value = ", this.value);
+// });
+
+let input = document.querySelector("#text");
+let p = document.querySelector("p");
+
+input.addEventListener("input", function(){
+    console.log(input.value);
+    p.innerText = input.value;
 });
