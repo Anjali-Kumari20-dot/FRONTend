@@ -1,5 +1,23 @@
 let form = document.querySelector("form");
 form.addEventListener("submit", function(event){
     event.preventDefault();
-    alert("Form Submitted");
+    console.dir(form);
+
+
+    // alert("Form Submitted");
+
+    // let input = document.querySelector("input");
+    // console.log(input);
+    // console.dir(input);
+    // console.log(input.value);
+
+    // let user = document.querySelector("#user");
+    // let password = document.querySelector("#pass");
+    
+    // console.log(user.value);
+    // console.log(password.value);
+
+    // alert(`Hi ${user.value} 😊, your password is set to ${password.value}`);
+
+
 });
