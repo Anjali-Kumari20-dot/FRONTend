@@ -1,4 +1,4 @@
-//------------ JS CALL STACK -------------
+//----------------- JS CALL STACK ------------------
 // function hello() {
 //     console.log("Inside hello function");
 //     console.log("Hello");
@@ -15,7 +15,7 @@
 // console.log("Done, bye!");
 
 
-//-------- VISUALISING THE CALL STACK -------
+//------------ VISUALISING THE CALL STACK -----------
 // function one(){
 //     return 1;
 // }
@@ -30,7 +30,7 @@
 // three();
 
 
-//---------- JS IS SINGLE THREADED -----------
+//------------- JS IS SINGLE THREADED ---------------
 // let a = 25;
 // console.log(a);
 // let b = 10;
@@ -43,25 +43,63 @@
 
 // console.log("hello ...");
 
-// -------------- CALLBACK HELL ----------------
 
-h1 = document.querySelector("h1");
+// ---------------- CALLBACK HELL ------------------
+// h1 = document.querySelector("h1");
 
-function changeColor(color, delay, nextColorChange){
-    setTimeout(() => {
-        h1.style.color = color;
-        if (nextColorChange) nextColorChange();
-    }, delay);
+// function changeColor(color, delay, nextColorChange){
+//     setTimeout(() => {
+//         h1.style.color = color;
+//         if (nextColorChange) nextColorChange();
+//     }, delay);
+// }
+
+// changeColor("red", 1000, () => {
+//     changeColor("orange", 1000, () => {
+//         changeColor("green", 1000, () => {
+//             changeColor("pink", 1000, () => {
+//                 changeColor("purple", 1000);
+//             });
+//         });
+//     });
+// });
+
+
+//------------- SETTING UP FOR PROMISES --------------
+
+function savetoDB(data, success, failure){
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+    if(internetSpeed > 4){
+        success();
+    } else {
+        failure();
+    }
 }
 
-changeColor("red", 1000, () => {
-    changeColor("orange", 1000, () => {
-        changeColor("green", 1000, () => {
-            changeColor("pink", 1000, () => {
-                changeColor("purple", 1000);
-            });
-        });
-    });
-});
-// changeColor("orange", 2000);
-// changeColor("green", 3000);
+savetoDB(
+    "Apna college", 
+    () => {
+        console.log("Success: Your data was saved");
+        savetoDB(
+            "hello World",
+            () => {
+                console.log("Success2 : data2 saved");
+                savetoDB(
+                    "Anjali",
+                    () => {
+                        console.log("Success3 : data3 saved");
+                    },
+                    () => {
+                        console.log("Failure3 : Weak connection");
+                    }
+                );
+            },
+            () => {
+                console.log("Failure2 : Weak connection");
+            }
+        );
+    },
+    () => {
+    console.log("Failure: Weak connection, data was not saved", data);
+    }
+);  
