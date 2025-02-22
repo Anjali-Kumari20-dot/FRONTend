@@ -16,15 +16,28 @@
 
 
 //-------- VISUALISING THE CALL STACK -------
-function one(){
-    return 1;
-}
-function two(){
-    return one() + one();
-}
-function three(){
-    let ans = two() + one();
-    console.log(ans);
-}
+// function one(){
+//     return 1;
+// }
+// function two(){
+//     return one() + one();
+// }
+// function three(){
+//     let ans = two() + one();
+//     console.log(ans);
+// }
 
-three();
+// three();
+
+
+//---------- JS IS SINGLE THREADED -----------
+// let a = 25;
+// console.log(a);
+// let b = 10;
+// console.log(b);
+// console.log(a+b);
+setTimeout(function(){
+    console.log("Apna College");
+}, 2000);
+
+console.log("hello ...");
