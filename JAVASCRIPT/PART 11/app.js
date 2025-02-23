@@ -67,39 +67,52 @@
 
 //------------- SETTING UP FOR PROMISES --------------
 
-function savetoDB(data, success, failure){
-    let internetSpeed = Math.floor(Math.random() * 10) + 1;
-    if(internetSpeed > 4){
-        success();
-    } else {
-        failure();
-    }
+// function savetoDB(data, success, failure){
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if(internetSpeed > 4){
+//         success();
+//     } else {
+//         failure();
+//     }
+// }
+
+// savetoDB(
+//     "Apna college", 
+//     () => {
+//         console.log("Success: Your data was saved");
+//         savetoDB(
+//             "hello World",
+//             () => {
+//                 console.log("Success2 : data2 saved");
+//                 savetoDB(
+//                     "Anjali",
+//                     () => {
+//                         console.log("Success3 : data3 saved");
+//                     },
+//                     () => {
+//                         console.log("Failure3 : Weak connection");
+//                     }
+//                 );
+//             },
+//             () => {
+//                 console.log("Failure2 : Weak connection");
+//             }
+//         );
+//     },
+//     () => {
+//     console.log("Failure: Weak connection, data was not saved", data);
+//     }
+// );  
+
+function savetoDB(data){
+    return new Promise((resolve, reject) => {
+        let internetSpeed = Math.floor(Math.random() * 10) + 1;
+        if(internetSpeed > 4){
+            resolve("Success : data was saved");
+        }else{
+            reject("Failure : weak connection");
+        }
+    });
 }
 
-savetoDB(
-    "Apna college", 
-    () => {
-        console.log("Success: Your data was saved");
-        savetoDB(
-            "hello World",
-            () => {
-                console.log("Success2 : data2 saved");
-                savetoDB(
-                    "Anjali",
-                    () => {
-                        console.log("Success3 : data3 saved");
-                    },
-                    () => {
-                        console.log("Failure3 : Weak connection");
-                    }
-                );
-            },
-            () => {
-                console.log("Failure2 : Weak connection");
-            }
-        );
-    },
-    () => {
-    console.log("Failure: Weak connection, data was not saved", data);
-    }
-);  
+// savetoDB("Apna College");
