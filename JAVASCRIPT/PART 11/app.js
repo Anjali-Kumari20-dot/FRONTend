@@ -120,6 +120,31 @@
 // savetoDB("Apna College");
 
 // THEN() AND CATCH() METHODS
+// function savetoDB(data){
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4){
+//             resolve("Success : data was saved");
+//         }else{
+//             reject("Failure : weak connection");
+//         }
+//     });
+// }
+
+// let request = savetoDB("Apna College");
+// request
+//    .then(() => {
+//         console.log("Promise was resolved");
+//         console.log(request);
+//    })
+//    .catch(() => {
+//         console.log("Promise was rejected");
+//         console.log(request);
+//    })
+
+
+//----------------- PROMISES CHAINING -----------------
+
 function savetoDB(data){
     return new Promise((resolve, reject) => {
         let internetSpeed = Math.floor(Math.random() * 10) + 1;
@@ -134,9 +159,16 @@ function savetoDB(data){
 let request = savetoDB("Apna College");
 request
    .then(() => {
-        console.log("Promise was resolved");
-        console.log(request);
+        console.log("Data1 saved.");
+        return savetoDB("Hello World");
    })
+   .then(() => {
+        console.log("Data2 saved");
+        return savetoDB("Anjali");
+    })
+    .then(() => {
+        console.log("data3 saved");
+    })
    .catch(() => {
         console.log("Promise was rejected");
         console.log(request);
