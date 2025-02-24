@@ -176,34 +176,70 @@
 
 //----------- RESULTS AND ERRORS IN PROMISES ------------
 
-function savetoDB(data){
+// function savetoDB(data){
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4){
+//             resolve("Success : data was saved");
+//         }else{
+//             reject("Failure : weak connection");
+//         }
+//     });
+// }
+
+// let request = savetoDB("Apna College");
+// request
+//    .then((result) => {
+//         console.log("Data1 saved.");
+//         console.log("result of promise: ",result);
+//         return savetoDB("Hello World");
+//     })
+//     .then((result) => {
+//         console.log("Data2 saved");
+//         console.log("result of promise: ",result);
+//         return savetoDB("Anjali");
+//     })
+//     .then((result) => {
+//         console.log("data3 saved");
+//         console.log("result of promise: ",result);
+//     })
+//     .catch((error) => {
+//         console.log("Promise was rejected");
+//         console.log("error of promise: ",error);
+//     })
+
+
+//--------------- REFACTORING OLD CODE ------------------- 
+
+h1 = document.querySelector("h1");
+
+function changeColor(color, delay, nextColorChange){
     return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if(internetSpeed > 4){
-            resolve("Success : data was saved");
-        }else{
-            reject("Failure : weak connection");
-        }
+        setTimeout(() => {
+            h1.style.color = color;
+            resolve("Color Changeed!");
+        }, delay);
     });
 }
 
-let request = savetoDB("Apna College");
-request
-   .then((result) => {
-        console.log("Data1 saved.");
-        console.log("result of promise: ",result);
-        return savetoDB("Hello World");
-    })
-    .then((result) => {
-        console.log("Data2 saved");
-        console.log("result of promise: ",result);
-        return savetoDB("Anjali");
-    })
-    .then((result) => {
-        console.log("data3 saved");
-        console.log("result of promise: ",result);
-    })
-    .catch((error) => {
-        console.log("Promise was rejected");
-        console.log("error of promise: ",error);
-    })
+changeColor("red", 1000)
+.then(() => {
+    console.log("Red color was completed");
+    return changeColor("orange", 1000);
+})
+.then(() => {
+    console.log("Orange color was completed");
+    return changeColor("green", 1000);
+})
+.then(() => {
+    console.log("Blue color was completed");
+})
+// changeColor("red", 1000, () => {
+//     changeColor("orange", 1000, () => {
+//         changeColor("green", 1000, () => {
+//             changeColor("pink", 1000, () => {
+//                 changeColor("purple", 1000);
+//             });
+//         });
+//     });
+// });
