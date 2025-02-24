@@ -132,11 +132,12 @@ function savetoDB(data){
 }
 
 let request = savetoDB("Apna College");
-request.then(() => {
-    console.log("Promise was resolved");
-})
-console.log(request);
-
-// .catch(() => {
-//     console.log("")
-// });
+request
+   .then(() => {
+        console.log("Promise was resolved");
+        console.log(request);
+   })
+   .catch(() => {
+        console.log("Promise was rejected");
+        console.log(request);
+   })
