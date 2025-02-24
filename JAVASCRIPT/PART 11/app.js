@@ -145,6 +145,37 @@
 
 //----------------- PROMISES CHAINING -----------------
 
+// function savetoDB(data){
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4){
+//             resolve("Success : data was saved");
+//         }else{
+//             reject("Failure : weak connection");
+//         }
+//     });
+// }
+
+// let request = savetoDB("Apna College");
+// request
+//    .then(() => {
+//         console.log("Data1 saved.");
+//         return savetoDB("Hello World");
+//     })
+//     .then(() => {
+//         console.log("Data2 saved");
+//         return savetoDB("Anjali");
+//     })
+//     .then(() => {
+//         console.log("data3 saved");
+//     })
+//     .catch(() => {
+//         console.log("Promise was rejected");
+//         console.log(request);
+//     })
+
+//----------- RESULTS AND ERRORS IN PROMISES ------------
+
 function savetoDB(data){
     return new Promise((resolve, reject) => {
         let internetSpeed = Math.floor(Math.random() * 10) + 1;
@@ -158,18 +189,21 @@ function savetoDB(data){
 
 let request = savetoDB("Apna College");
 request
-   .then(() => {
+   .then((result) => {
         console.log("Data1 saved.");
+        console.log("result of promise: ",result);
         return savetoDB("Hello World");
-   })
-   .then(() => {
+    })
+    .then((result) => {
         console.log("Data2 saved");
+        console.log("result of promise: ",result);
         return savetoDB("Anjali");
     })
-    .then(() => {
+    .then((result) => {
         console.log("data3 saved");
+        console.log("result of promise: ",result);
     })
-   .catch(() => {
+    .catch((error) => {
         console.log("Promise was rejected");
-        console.log(request);
-   })
+        console.log("error of promise: ",error);
+    })
