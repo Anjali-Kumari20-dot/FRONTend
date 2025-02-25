@@ -52,11 +52,20 @@ function colorChange(color, delay) {
 }
 
 async function show() {
-    await colorChange("violet", 1000);
-    await colorChange("indigo", 1000);
-    await colorChange("green", 1000);
-    await colorChange("yellow", 1000);
-    await colorChange("orange", 1000);
+    try {
+        await colorChange("violet", 1000);
+        await colorChange("indigo", 1000);
+        await colorChange("green", 1000);
+        await colorChange("yellow", 1000);
+        await colorChange("orange", 1000);
+    } catch (err) {
+        console.log("Error caught");
+        console.log(err);
+    }
 
-    return "done";
+    let a = 5;
+    console.log(a);
+    console.log("New number = ", a + 3);
+
+    // return "done";
 }
