@@ -1,30 +1,104 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 .container {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+    flex-direction: column; */
 }
-.style-corners{
-    display: flex;
-    flex-direction: column;
+.style-corners {
+  display: flex;
+  flex-direction: column;
 }
-.style-corner1{
-    height: 600px;
-    width: 600px;
-    background-color: rgb(231, 185, 19);
-    border-radius: 0 0 100% 0 ;
+.style-corner1 {
+  height: 600px;
+  width: 600px;
+  background-color: rgb(231, 185, 19);
+  border-radius: 0 0 100% 0;
 }
-.style-corner2{
-    height: 600px;
-    width: 600px;
-    background-color: rgb(231, 185, 19);
-    position: fixed;
-    border-radius:  100% 0 0 0;
-    bottom: 0;
-    right: 0;
+.style-corner2 {
+  height: 600px;
+  width: 600px;
+  background-color: rgb(231, 185, 19);
+  position: fixed;
+  border-radius: 100% 0 0 0;
+  bottom: 0;
+  right: 0;
+}
+
+.calculator {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 450px;
+  top: 10%;
+  left: 35%;
+}
+
+.calculator-display {
+  height: 200px;
+  border-bottom: 2px white solid;
+  background-color: black;
+  border-radius: 15px 15px 0 0;
+}
+.switch {
+  color: white;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+.calculator-box {
+  flex-grow: 1;
+  background-color: rgb(23, 23, 23);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 10px rgba(0, 0, 0, 0.745);
+}
+.operations {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  place-items: center;
+}
+.icons {
+    height: 100px;
+}
+.boxes {
+  border-radius: 4px;
+  background-color: rgb(208, 152, 47);
+  height: 62px;
+  width: 65px;
+  text-align: center;
+  line-height: 55px;
+}
+.icons {
+  color: rgb(208, 152, 47);
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+  padding-top: 15px;
+}
+.icons div i{
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.c, .bracket, .percent, .div {
+  background-color: #6B6361;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .more, .nine, .zero, .dot{
+  background-color: #c46f43;
+}
+
+.equalTo {
+  background-color: #ffc77d;
 }
