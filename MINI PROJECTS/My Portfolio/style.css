@@ -109,5 +109,6 @@ footer{
     background-color: lavender;
 }
 .footer {
-   display: flex; 
+   display: flex;
+   margin: 23px; 
 }
