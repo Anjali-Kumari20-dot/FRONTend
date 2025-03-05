@@ -112,7 +112,13 @@
 .view{
   text-align: end;
   padding: 15px;
+  margin: 0;
   font-size: 25px ;
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+.onClick{
+  background-color: rgb(47, 44, 44);
+  color: white;
 }
