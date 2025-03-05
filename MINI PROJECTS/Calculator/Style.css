@@ -76,6 +76,10 @@
   width: 65px;
   text-align: center;
   line-height: 55px;
+  cursor: pointer;
+}
+.boxes:hover {
+  background-color: rgb(167, 120, 32);
 }
 .icons {
   color: rgb(208, 152, 47);
@@ -101,4 +105,14 @@
 
 .equalTo {
   background-color: #ffc77d;
+}
+.white {
+  color: white;
+}
+.view{
+  text-align: end;
+  padding: 15px;
+  font-size: 25px ;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
