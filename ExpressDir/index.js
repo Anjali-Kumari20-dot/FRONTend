@@ -14,9 +14,9 @@ app.listen(port, () => {
 //     res.send(code);
 // });
 
-// app.get("/", (req, res) => {
-//     res.send("Hello, I am root");
-// });
+app.get("/", (req, res) => {
+    res.send("Hello, I am root");
+});
 // app.get("/mango", (req, res) => {
 //     res.send("You contacted mango path");
 // });
