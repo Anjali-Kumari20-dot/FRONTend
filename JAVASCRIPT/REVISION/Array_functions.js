@@ -164,3 +164,60 @@ const student = {
 const {username: user, password: pass} = student;
 
 console.log(user); 
+
+// --------------------PRACTICE QUESTIONS-------------------------------------------//
+
+// QUESTION 1
+let nums5 = [12, 23, 34, 45, 56, 7, 8, 10];
+
+function squareAndSumThenAverage (arr) {
+  let arrSize = arr.length;
+  let sum = 0;
+  sum = arr.reduce((sum, el) => sum + (el * el));
+  return sum / arrSize;
+}
+
+
+
+console.log(squareAndSumThenAverage(nums5));
+
+// QUESTION 2
+
+function Exceed(arr) {
+  return nums5.map((el) => el + 5);
+}
+
+console.log(Exceed(nums5));
+
+// QUESTION 3
+let originalArr = ['anjali', 'aditya', 'rupali', 'hatichuki'];
+
+function capitalise (str) {
+  return originalArr.map(el => el.toUpperCase()) ;
+}
+console.log(capitalise(originalArr));
+
+// QUESTION 4
+const doubleAndReturnArgs = (arr, ...args) => [
+  ...arr,
+  ...args.map((v) => v * 2),
+];
+
+console.log(doubleAndReturnArgs(nums5, 4, 5, 7, 8, 90));
+
+// QUESTION 5
+const student1 = {
+  name: "Anjali Kumari",
+  age : 20,
+  class: 11,
+  email : "anjali123@gmail.com",
+  subjects : ["hindi", "english", "Math", "Chemistry", "Physics"],
+}
+
+const student2 = {
+  password: "123..df",
+  username: "anjali@123",
+}
+const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
+
+console.log(mergeObjects(student1, student2));
