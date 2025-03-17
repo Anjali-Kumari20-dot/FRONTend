@@ -57,4 +57,4 @@ const object2 = {
     },
 };
 // object2.method(callback.bind(object2), 1, 2); // 5
-object2.method(callback(), 1, 2); // undefined
+object2.method(callback, 1, 2); // undefined
