@@ -2,6 +2,7 @@
 // import { generateMock } from "@anatine/zod-mock";
 
 // const mysql = require("mysql2");
+import {faker} from '@faker-js/faker';
 import mysql from 'mysql2';
 
 const connection = mysql.createConnection({
@@ -10,19 +11,37 @@ const connection = mysql.createConnection({
   database: "delta_app",
   password: "123anjali..",
 });
-
-try {
-    connection.query("SHOW TABLES", (err, result) => {
-        if(err) throw err;
-        console.log(result);
-    });
-}catch(err) {
-    console.log(err);
+let getRandomUser = () => {
+    return [
+        faker.datatype.uuid(),
+        faker.internet.userName(),
+        faker.internet.email(),
+        faker.internet.password(),
+    ];
 };
- 
-connection.end();
 
-// let getRandomUser = () => {
+// let c = "CREATE TABLE user(id INT PRIMARY KEY, username VARCHAR(50), email VARCHAR(50), password VARCHAR(15))";
+// INSERTING NEW DATA
+let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+let data = [];
+for (let i = 0; i <= 100; i++){
+    console.log(getRandomUser());
+}
+// try {
+//     connection.query(q, users, (err, result) => {
+//         if(err) throw err;
+//         console.log(result);
+//     });
+// }catch(err) {
+//     console.log(err);
+// };
+ 
+// connection.end();
+
+
+// let getRandomUser = (
+
+// ) => {
 //   const schema = z.object({
 //     id: z.string().nonempty(),
 //     name: z.string(),
