@@ -1,0 +1,51 @@
+.pink {
+    background-color: pink;
+}
+.blue{
+    background-color: blue;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+}
+
+div{
+    height: 100px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.activity{
+    text-align: center;
+    width: 100%;
+}
+.activity div{
+    margin: auto;
+}
+.container {
+    height: 300px;
+    width: 600px;
+    border: 2px solid black;
+}
+.white{
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+}
+.num {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
