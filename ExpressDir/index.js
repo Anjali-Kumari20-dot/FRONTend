@@ -37,4 +37,4 @@ app.get("/search", (req, res) => {
         console.log("No search query")
     }
     res.send(`Search results for query : ${q}`);
-})
+});

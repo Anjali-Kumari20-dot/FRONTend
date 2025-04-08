@@ -1,0 +1,85 @@
+body{
+    /* background-color: #898c8f; */
+}
+.container {
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #898c8f;
+}
+.menu {
+  height: 97vh;
+  width: 40%;
+  border: 2px solid rgb(75, 72, 72);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(168, 168, 168, 0.796);
+  background-color: plum;
+}
+.notes h1 {
+  height: 4rem;
+  text-align: center;
+}
+.cards {
+  height: 82vh;
+  width: 60vw;
+  border: 2px solid rgb(75, 72, 72);
+  border-radius: 1rem;
+  margin-left: 1rem;
+  box-shadow: 0 0 10px rgba(168, 168, 168, 0.797);
+  display: flex;
+  flex-wrap: wrap;
+}
+.bar,
+.search,
+.delete {
+  height: 3.5rem;
+  margin-left: 1rem;
+}
+.tasks {
+  height: 22rem;
+  margin-left: 1rem;
+}
+.tags {
+  margin-left: 1rem;
+}
+.box {
+  width: calc(33.33% - 10px);
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 12rem;
+}
+.box:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+.one {
+    background-color: 	#fff9c2;
+}
+.two {
+    background-color: 	#fde7b1;
+}
+.three {
+    background-color: 	#ffd5b3;
+}
+.four {
+    background-color: 	#ffb69e;
+}
+.five {
+    background-color: 	#f1367e;
+}
+.icons {
+    margin-right: 1.5rem;
+}
+.plus{
+    font-size: 100px;
+    font-weight: 900;
+    margin: auto;
+    margin-top: 16%;
+    margin-left: 31%;
+}

@@ -19,6 +19,10 @@ const chatSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
+  updated_at: { // Khud se banana hai #HW
+    type: Date,
+    required: true
+  },
 });
 
 const Chat = mongoose.model("Chat", chatSchema);
