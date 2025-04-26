@@ -1,16 +1,15 @@
+import Layout from "./AmazonCards.jsx";
 import "./App.css";
-import ProductTab from "./ProductTab.jsx";
+import Button from "./Button.jsx";
+import Form from "./Form.jsx";
 
 function App() {
-  let styles = {
-    marginTop: "8rem",
-  }
   return (
-    <div style={styles}>
-      <h2>Blockbuster Deals | Shop Now</h2>
-      <ProductTab />
-    </div>
-  );
+    <>
+      {/* <Button/> */}
+      <Form/>
+    </>
+  )
 }
 
 export default App;
