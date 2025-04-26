@@ -1,10 +1,16 @@
 import "./App.css";
-import Product from "./Product.jsx";
 import ProductTab from "./ProductTab.jsx";
 
-
 function App() {
-  return <ProductTab />;
+  let styles = {
+    marginTop: "8rem",
+  }
+  return (
+    <div style={styles}>
+      <h2>Blockbuster Deals | Shop Now</h2>
+      <ProductTab />
+    </div>
+  );
 }
-  
+
 export default App;

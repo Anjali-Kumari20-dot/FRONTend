@@ -1,32 +1,19 @@
 import Product from "./Product.jsx";
 
 function ProductTab() {
-  // RENDERING ARRAYS
-  let options = ["Hi-tech", "Lightweight", "Portable"];
-  //   let options = [
-  //     <li>"Hi-tech"</li>,
-  //     <li>"Lightweight"</li>,
-  //     <li>"Portable"</li>,
-  //   ];
-  let options2 = { a: "Hi-tech", b: "Lightweight", c: "Portable" };
+  let styles = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+  }
   return (
-    <>
-      <Product
-        title="Phone"
-        price={30000}
-        features={options}
-      />
-      <Product
-        title="Laptop"
-        price={40000}
-        features={options}
-      />
-      <Product
-        title="Printer"
-        price={50000}
-        features={options}
-      />
-    </>
+    <div style={styles}>
+      <Product title="Logitech MX Master" image="/src/images/mouse.jpg" idx={0}/>
+      <Product title="Apple Pencil (2nd Gen)" image="/src/images/applePencil.jpg" idx={1}/>
+      <Product title="Zebronics zeb-transformer" image="/src/images/keyboard.jpg" idx={2}/>
+      <Product title="Petronics Toad 23" image="/src/images/wirelessMouse.jpg" idx={3}/>
+    </div>
   );
 }
 
