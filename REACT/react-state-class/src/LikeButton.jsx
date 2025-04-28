@@ -6,18 +6,20 @@ export default function LikeButton() {
 
   let toggleLike = () => {
     setIsLiked(!isLiked);
-    if(isLiked == true){
-        setClicks(clicks + 1);
+    if (isLiked == true) {
+      setClicks(clicks + 1);
     }
-    
   };
 
   let styles = {
     color: "red",
   };
   return (
-    <div >
-        <h2>Express Your <i  style={styles} className="fa-solid fa-heart"></i> with a click!</h2>
+    <div>
+      <h2>
+        Express Your <i style={styles} className="fa-solid fa-heart"></i> with a
+        click!
+      </h2>
       <h1 style={styles} onClick={toggleLike}>
         {isLiked ? (
           <i className="fa-solid fa-heart"></i>
@@ -25,7 +27,7 @@ export default function LikeButton() {
           <i className="fa-regular fa-heart"></i>
         )}
       </h1>
-      <h1>{isLiked ? `${clicks} Likes` : `${clicks} Likes` }  </h1>
+      <h1>{isLiked ? `${clicks} Likes` : `${clicks} Likes`} </h1>
     </div>
   );
 }
