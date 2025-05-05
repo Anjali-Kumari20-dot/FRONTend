@@ -1,0 +1,15 @@
+.ticket{
+    border: 1px solid pink;
+    height: 3rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.ticket:hover{
+    box-shadow: 2px 1px 5px 3px rgba(255, 192, 203, 0.712);
+}

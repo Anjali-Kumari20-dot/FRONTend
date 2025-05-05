@@ -1,12 +1,18 @@
-import './App.css'
-import LudoBoard  from './LudoBoard'
-import Todo from './Todo'
+import "./App.css";
+import Lottery from "./Lottery";
+import { sum } from "./Helper";
+
 function App() {
+  let winningSum = 15
+  let winCondition = (ticket) => {
+    return sum(ticket) === winningSum;
+  };
+
   return (
     <>
-      <Todo />
+      <Lottery n={3} winCondition={winCondition} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
