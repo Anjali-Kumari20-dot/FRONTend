@@ -1,0 +1,41 @@
+h4{
+    color: rgb(95, 2, 95);
+    font-size: 2rem;
+    border: 2px solid rgb(162, 19, 162);
+    border-radius: 2rem;
+    background-color: rgb(207, 164, 207);
+}
+.info{
+    margin: 2rem;
+    display: flex;
+    align-items: flex-start;
+}
+.info label{
+    margin-right: 1rem;
+    width: 30%;
+    display: flex;
+    align-self: start;
+}
+
+button{
+    color: white;
+    background-color: green;
+}
+.typeHere {
+    height: 3rem;
+    width: 20rem;
+    border-radius: 0.9rem;
+    background-color: rgb(188, 157, 188);
+    color: purple;
+    font-size: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+.typeHere:hover{
+    transform: scale(1.1);
+}
+.error{
+    color: red;
+}

@@ -1,0 +1,20 @@
+.comment {
+    border: 0.1rem solid rgb(115, 57, 115);
+    padding: 2rem;
+    border-radius: 2.5rem;
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    margin-top: 1.5rem;
+}
+.comment:hover {
+    box-shadow: 0.5rem 0.5rem 5px 2px rgba(221, 160, 221, 0.753);
+    transform: scale(1.06);
+}
+.MainView{
+    display: flex;
+    height: 600px;
+}
+.view{
+    width: 50%;
+    margin-right: 10rem;
+    flex-wrap: wrap;
+}
