@@ -24,7 +24,8 @@ export default function CommentsForm({ addNewComment }) {
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      addNewComment(values);
+      formik.resetForm();
     },
   });
 
@@ -56,7 +57,7 @@ export default function CommentsForm({ addNewComment }) {
             id="username"
             placeholder="UserName"
             value={formik.values.username}
-            onChange={formik.handleInputChange}
+            onChange={formik.handleChange}
             name="username"
             className="typeHere"
           />
@@ -73,7 +74,7 @@ export default function CommentsForm({ addNewComment }) {
             id="remark"
             placeholder="Add few remarks"
             value={formik.values.remarks}
-            onChange={formik.handleInputChange}
+            onChange={formik.handleChange}
             name="remarks"
             className="typeHere"
           >
@@ -89,7 +90,7 @@ export default function CommentsForm({ addNewComment }) {
             max={5}
             value={formik.values.rating}
             placeholder="rating"
-            onChange={formik.handleInputChange}
+            onChange={formik.handleChange}
             name="rating"
             id="rating"
             className="typeHere"

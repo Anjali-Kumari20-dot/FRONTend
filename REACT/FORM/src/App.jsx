@@ -7,9 +7,9 @@ import Joker from './Joker'
 function App() {
   return (
     <>
-      {/* <Comment /> */}
+      <Comment />
       {/* <Counter/> */}
-      <Joker />
+      {/* <Joker /> */}
     </>
   )
 }

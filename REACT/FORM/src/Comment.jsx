@@ -11,6 +11,10 @@ export default function Comment() {
     },
   ]);
 
+  let deleteComment = (idx) => {
+    setComments((prevComments) => prevComments.filter((_, index) => index !== idx));
+  }
+
   function addNewComment(comment) {
     setComments((currComments) => [...currComments, comment]);
   }
@@ -28,6 +32,7 @@ export default function Comment() {
             <span>(rating = {comment.rating})</span>
             &nbsp;
             <p>- {comment.username}</p>
+            <i class="fa-solid fa-trash" onClick={() => deleteComment(idx)}></i>
           </div>
         ))}
       </div>
