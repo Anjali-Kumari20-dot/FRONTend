@@ -23,7 +23,7 @@ export const todoSlice = createSlice({
     },
     markAsDone: (state, action) => {
       // action.payload
-      state.todos = state.todos.map((todo) => {
+      state.todos = forEach((todo) => {
         if (todo.id === action.payload) {
           todo.isDone = true;
         }
